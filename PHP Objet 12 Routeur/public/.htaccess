@@ -1,0 +1,9 @@
+# - On active la réécriture
+RewriteEngine on 
+
+# - On lui donne sa condition
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# - On lui donne sa règle de réécriture
+# - On lui dit tout ce qu'on tape on renvoie sur index.php
+RewriteRule ^(.*)$ index.php [QSA,L]
