@@ -17,7 +17,7 @@ class Router
 
     public function resolve(string $uri): mixed
     {
-        var_dump(explode('?', $uri)[0]);
+        // var_dump(explode('?', $uri)[0]);
         $path = explode('?', $uri)[0];
         $action = $this->routes[$path] ?? null;
 
@@ -28,14 +28,14 @@ class Router
 
         // - Si c'est un tableau on va instancier la class et appeler la méthode 
         if (is_array($action)) {
-            var_dump($action);
-
             // - 'Unpacking' sur le tableau : 1. sera stocké dans $className, 2. sera stocké dans $method
             // - $className = $action[0], $methode = $action[1]
             [$className, $method] = $action;
 
             // - On vérifie si la classe et la méthode existent
             if (class_exists($className) && method_exists($className, $method)) {
+                var_dump($className, $method);
+
                 // - On peut instancier la class
                 $class = new $className();
                 // - Fonction native de PHP pour créer un callback grâce à un tableau

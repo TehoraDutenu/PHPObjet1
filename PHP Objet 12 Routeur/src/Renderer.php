@@ -23,7 +23,7 @@ class Renderer
         require BASE_VIEW_PATH . $this->viewPath . '.php';
 
         // - Lire le contenu courant du tampon de sortie puis on l'efface
-        return ob_end_clean();
+        return ob_get_clean();
     }
 
     public function __toString(): string

@@ -4,9 +4,9 @@
 // - Définir une constante qui va pointer sur le chemin relatif du dossier views
 define('BASE_VIEW_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'views' . DIRECTORY_SEPARATOR);
 
-use Exceptions\RouteNotFindException;
-use Router\Router;
 use Source\App;
+use Router\Router;
+use Exceptions\RouteNotFindException;
 
 require '../vendor/autoload.php';
 
@@ -24,6 +24,7 @@ $router->register('/contact', function () {
 });
  */
 
+// - Enregistrer les routes avec ses controllers
 $router->register('/', ['Controllers\HomeController', 'index']);
 
 (new App($router, $_SERVER['REQUEST_URI']))->run();

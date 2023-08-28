@@ -8,8 +8,8 @@
 </head>
 
 <body>
-    <h1>HOME PAGE</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia animi iste repudiandae reprehenderit aliquid numquam dolorem, autem incidunt illum similique deserunt tenetur rerum eveniet expedita est nobis unde fugit magni.</p>
+    <h3>Home Page</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, accusantium ut ratione distinctio ullam repellat quasi tempore placeat laborum vitae delectus, assumenda porro, dicta labore corrupti recusandae eaque sint eligendi?</p>
 </body>
 
 </html>

@@ -11,6 +11,7 @@ class App
     public function __construct(private Router $router, private string $uri)
     {
     }
+
     public function run()
     {
         try {
