@@ -26,5 +26,6 @@ $router->register('/contact', function () {
 
 // - Enregistrer les routes avec ses controllers
 $router->register('/', ['Controllers\HomeController', 'index']);
+$router->register('/produits', ['Controllers\ProduitController', 'index']);
 
 (new App($router, $_SERVER['REQUEST_URI']))->run();

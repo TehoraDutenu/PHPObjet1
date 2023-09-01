@@ -15,6 +15,10 @@ class ComposerStaticInit2032906f7db44897c013f2e3a29d0b23
         array (
             'Router\\' => 7,
         ),
+        'M' => 
+        array (
+            'Modeles\\' => 8,
+        ),
         'E' => 
         array (
             'Exceptions\\' => 11,
@@ -35,6 +39,10 @@ class ComposerStaticInit2032906f7db44897c013f2e3a29d0b23
         'Router\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Router',
+        ),
+        'Modeles\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/Modeles',
         ),
         'Exceptions\\' => 
         array (

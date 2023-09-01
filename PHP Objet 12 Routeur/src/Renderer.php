@@ -4,19 +4,22 @@ namespace Source;
 
 class Renderer
 {
-    public function __construct(private string $viewPath)
+    public function __construct(private string $viewPath, private ?array $params)
     {
     }
 
-    public static function make(string $viewPath): static
+    public static function make(string $viewPath, ?array $params): static
     {
-        return new static($viewPath);
+        return new static($viewPath, $params);
     }
 
     public function view()
     {
         // - Démarrer le système de mise en tampon de PHP
         ob_start();
+
+        // - Extraire les données du tableau $params
+        extract($this->params);
 
         // - Récupérer la constante qui nous mène au dossier views 
         // - Lui passer la fin du chemin à travers $viewPath : require '../views/home/index.php
